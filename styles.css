@@ -1,0 +1,285 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Стили для секции перед навигационным меню */
+.contact-info {
+    display: flex;
+    justify-content: space-between; /* элементы по краям */
+    align-items: center; /*элементы по вертикали */
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.contact-info .left-content {
+    display: flex;
+    align-items: center; /*  элементы по вертикали */
+}
+
+.contact-info .right-content {
+    display: flex;
+    align-items: center; /*элементы по вертикали */
+}
+
+.contact-icons {
+    margin-right: 10px; /* отступ между иконками мессенджеров */
+}
+
+
+
+.registration .btn {
+    margin-right: 10px; /* Увеличиваем отступ между кнопками */
+}
+
+.contact-info .right-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Размещаем содержимое справа */
+}
+
+
+/* Стили для навигационного меню */
+nav {
+    padding: 2px 0; /* Задание отступов вверху и внизу */
+    background-color: #283761; 
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  background-color: #283761;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 24px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Стили для главной секции */
+.main-section {
+    padding: 50px 20px; /* Увеличил отступы для лучшего визуального эффекта */
+    background-image: url('images/atlantika.png');
+    background-size: 1440px 682px; /* Задаем конкретные размеры для фоновой картинки */
+    background-position: center; /* Центрируем фоновую картинку */
+}
+
+.main-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff; /* Настраиваемый цвет текста */
+}
+
+.main-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff; /* Настраиваемый цвет текста */
+}
+
+.main-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-section ul li {
+  margin-bottom: 10px;
+  color: #ffffff; /* Настраиваемый цвет текста */
+}
+
+/* Стили для кнопок */
+button {
+  padding: 10px 20px;
+  background-color: #01A0C6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #01A0C6;
+  border-radius: 8px;
+
+}
+
+button:hover {
+  background-color: #01A0C6;
+}
+
+/* Стили для футера */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer div,
+footer nav {
+  margin-bottom: 20px;
+}
+
+footer nav ul {
+  padding-left: 0;
+}
+
+footer nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer nav ul li a:hover {
+  color: #007bff;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+/* Стили для секции с логотипами брендов */
+.brand-logos {
+    display: flex; /* Изменяем на flex */
+    flex-wrap: wrap; /* Перенос элементов на новую строку, если они не помещаются в одну строку */
+    justify-content: center; /*по центру */
+    align-items: center; /* по центру */
+    margin-bottom: 26px; /* Добавляем отступ снизу между блоками */
+    margin-top: 26px; /* Добавляем отступ сверху между блоками */
+}
+
+.brand-logos img {
+    max-width: 130px; /* Максимальная ширина изображений */
+    height: 98px; /* Автоматическая высота */
+    margin: 32px; /* Добавляем небольшие отступы между изображениями */
+}
+
+/* Заклик до дії */
+.custom-section {
+  background-image: url("images/photo 2.png");
+  background-size: cover; /* Растягиваем изображение на всю область секции */
+  background-position: center; /* Центрируем изображение */
+  color: #ffffff; /* Цвет текста */
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 50px 0; /* Внутренние отступы для контента */
+}
+
+.custom-section .content {
+  max-width: 600px; /* Максимальная ширина контейнера с контентом */
+  margin: 0 auto; /* Выравниваем по центру */
+}
+
+.custom-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.custom-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.custom-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-section button:hover {
+  background-color: #0056b3;
+}
+/* Секция с формой для вопросов */
+.question-section {
+  background-color: #f5f5f5;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.question-section .content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.question-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.question-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.question-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-section form div {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.question-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.question-section input[type="text"],
+.question-section input[type="tel"],
+.question-section input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.question-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.question-section button:hover {
+  background-color: #0056b3;
+}
+/* Стили для футера */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    /* Центрируем содержимое футера по горизонтали */
+    justify-content: center;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
