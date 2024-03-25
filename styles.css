@@ -197,14 +197,14 @@ footer nav ul li a:hover {
 
 .custom-section button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #01A0C6;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 .custom-section button:hover {
-  background-color: #0056b3;
+  background-color: #01A0C6;
 }
 /* Секция с формой для вопросов */
 .question-section {
@@ -257,7 +257,7 @@ footer nav ul li a:hover {
 
 .question-section button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #01A0C6;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -281,5 +281,61 @@ footer {
 .footer-left,
 .footer-right {
   flex: 1;
+}
+
+/* Для екранів шириною від 280px до 600px */
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .contact-info .left-content,
+  .contact-info .right-content {
+    flex-basis: 100%;
+  }
+  .brand-logos img {
+    max-width: 100px;
+    height: auto;
+    margin: 10px;
+  }
+}
+
+/* Для екранів шириною від 280px до 600px */
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  p,
+  nav ul li a,
+  .brand-logos img {
+    font-size: 14px; /* Зменшуємо розмір тексту до 14px для малих екранів */
+  }
+}
+
+/* Для екранів шириною більше 600px */
+@media screen and (min-width: 600px) {
+  p,
+  nav ul li a,
+  .brand-logos img {
+    font-size: 18px; /* Повертаємо стандартний розмір тексту для більших екранів */
+  }
+}
+
+/* Сховати оверлей меню за замовчуванням */
+.overlay-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Півпрозорий фон */
+  z-index: 1000; /*відображати поверх інших елементів */
+}
+
+/* Підказка для користувача, як натискати на бургер кнопку */
+.burger-menu {
+  cursor: pointer;
+}
+
+/* Стилі для бургер кнопки */
+.burger-icon {
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  margin: 6px 0;
 }
 
