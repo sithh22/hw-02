@@ -11,53 +11,52 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 /* Стили для секции перед навигационным меню */
 .contact-info {
-    display: flex;
-    justify-content: space-between; /* элементы по краям */
-    align-items: center; /*элементы по вертикали */
-    background-color: #f5f5f5;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* элементы по краям */
+  align-items: center;
+  /*элементы по вертикали */
+  background-color: #f5f5f5;
+  padding: 20px;
 }
 
-.contact-info .left-content {
-    display: flex;
-    align-items: center; /*  элементы по вертикали */
-}
-
-.contact-info .right-content {
-    display: flex;
-    align-items: center; /*элементы по вертикали */
+.left-content {
+  display: flex;
+  align-items: center;
+  /*  элементы по вертикали */
 }
 
 .contact-icons {
-    margin-right: 10px; /* отступ между иконками мессенджеров */
+  margin-right: 10px;
+  /* отступ между иконками мессенджеров */
 }
 
-
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /*элементы по вертикали */
+}
 
 .registration .btn {
-    margin-right: 10px; /* Увеличиваем отступ между кнопками */
+  margin-right: 10px;
+  /* Увеличиваем отступ между кнопками */
 }
-
-.contact-info .right-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Размещаем содержимое справа */
-}
-
 
 /* Стили для навигационного меню */
 nav {
-    padding: 2px 0; /* Задание отступов вверху и внизу */
-    background-color: #283761; 
+  padding: 2px 0;
+  /* Задание отступов вверху и внизу */
+  background-color: #283761;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
-  background-color: #283761;
 }
 
 nav ul li {
@@ -76,32 +75,29 @@ nav ul li a:hover {
 
 /* Стили для главной секции */
 .main-section {
-    padding: 50px 20px; /* Увеличил отступы для лучшего визуального эффекта */
-    background-image: url('images/atlantika.png');
-    background-size: 1440px 682px; /* Задаем конкретные размеры для фоновой картинки */
-    background-position: center; /* Центрируем фоновую картинку */
+  padding: 50px 0px;
+  /* Увеличил отступы для лучшего визуального эффекта */
+  background-image: url('images/atlantika.png');
+  /* background-size: 1440px 682px; */
+  /* Задаем конкретные размеры для фоновой картинки */
+  background-position: center;
+  /* Центрируем фоновую картинку */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main-section h1 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 20px;
-  color: #ffffff; /* Настраиваемый цвет текста */
+  color: #ffffff;
+  /* Настраиваемый цвет текста */
 }
 
 .main-section p {
   font-size: 18px;
   margin-bottom: 20px;
-  color: #ffffff; /* Настраиваемый цвет текста */
-}
-
-.main-section ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.main-section ul li {
-  margin-bottom: 10px;
-  color: #ffffff; /* Настраиваемый цвет текста */
+  color: #ffffff;
+  /* Настраиваемый цвет текста */
 }
 
 /* Стили для кнопок */
@@ -116,73 +112,57 @@ button {
 
 }
 
-button:hover {
-  background-color: #01A0C6;
+button:hover,
+button:focus {
+  background-color: #027592;
 }
 
-/* Стили для футера */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer div,
-footer nav {
-  margin-bottom: 20px;
-}
-
-footer nav ul {
-  padding-left: 0;
-}
-
-footer nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-footer nav ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-footer nav ul li a:hover {
-  color: #007bff;
-}
-
-.social-icons a {
-  margin-right: 10px;
-}
 /* Стили для секции с логотипами брендов */
-.brand-logos {
-    display: flex; /* Изменяем на flex */
-    flex-wrap: wrap; /* Перенос элементов на новую строку, если они не помещаются в одну строку */
-    justify-content: center; /*по центру */
-    align-items: center; /* по центру */
-    margin-bottom: 26px; /* Добавляем отступ снизу между блоками */
-    margin-top: 26px; /* Добавляем отступ сверху между блоками */
+.brand-logos>.container {
+  display: flex;
+  /* Изменяем на flex */
+  flex-wrap: wrap;
+  /* Перенос элементов на новую строку, если они не помещаются в одну строку */
+  justify-content: center;
+  /*по центру */
+  align-items: center;
+  /* по центру */
+  margin-bottom: 26px;
+  /* Добавляем отступ снизу между блоками */
+  margin-top: 26px;
+  /* Добавляем отступ сверху между блоками */
+  gap: 50px;
+  /* Добавляем небольшие отступы между изображениями */
 }
 
 .brand-logos img {
-    max-width: 130px; /* Максимальная ширина изображений */
-    height: 98px; /* Автоматическая высота */
-    margin: 32px; /* Добавляем небольшие отступы между изображениями */
+  max-width: 130px;
+  /* Максимальная ширина изображений */
+  height: 98px;
+  /* Автоматическая высота */
 }
 
 /* Заклик до дії */
 .custom-section {
   background-image: url("images/photo 2.png");
-  background-size: cover; /* Растягиваем изображение на всю область секции */
-  background-position: center; /* Центрируем изображение */
-  color: #ffffff; /* Цвет текста */
-  text-align: center; /* Выравнивание текста по центру */
-  padding: 50px 0; /* Внутренние отступы для контента */
+  background-size: cover;
+  /* Растягиваем изображение на всю область секции */
+  background-position: center;
+  /* Центрируем изображение */
+  color: #ffffff;
+  /* Цвет текста */
+  text-align: center;
+  /* Выравнивание текста по центру */
+  padding: 50px 0;
+  /* Внутренние отступы для контента */
 }
 
 .custom-section .content {
-  max-width: 600px; /* Максимальная ширина контейнера с контентом */
-  margin: 0 auto; /* Выравниваем по центру */
+  max-width: 600px;
+  width: 100%;
+  /* Максимальная ширина контейнера с контентом */
+  margin: 0 auto;
+  /* Выравниваем по центру */
 }
 
 .custom-section h2 {
@@ -195,28 +175,13 @@ footer nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.custom-section button {
-  padding: 10px 20px;
-  background-color: #01A0C6;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
 
-.custom-section button:hover {
-  background-color: #01A0C6;
-}
 /* Секция с формой для вопросов */
 .question-section {
   background-color: #f5f5f5;
   color: #000000;
   text-align: center;
   padding: 50px 0;
-}
-
-.question-section .content {
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 .question-section h2 {
@@ -227,6 +192,12 @@ footer nav ul li a:hover {
 .question-section p {
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+.question-section .content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .question-section form {
@@ -255,40 +226,59 @@ footer nav ul li a:hover {
   box-sizing: border-box;
 }
 
-.question-section button {
-  padding: 10px 20px;
-  background-color: #01A0C6;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.question-section button:hover {
-  background-color: #0056b3;
-}
 /* Стили для футера */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px 0;
-    /* Центрируем содержимое футера по горизонтали */
-    justify-content: center;
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px 0;
+  /* Центрируем содержимое футера по горизонтали */
+
+}
+.footer-right img {
+  display: inline-block;
+  vertical-align: middle; /* Вирівнюємо зображення по вертикалі */
+  margin-right: 1px; /* Задаємо відступ між зображенням і текстом */
 }
 
-.footer-left,
-.footer-right {
-  flex: 1;
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Для екранів шириною від 280px до 600px */
-@media screen and (min-width: 280px) and (max-width: 600px) {
+/* Стили для футера */
+
+footer div
+ {
+  margin-bottom: 20px;
+}
+.footer-right {text-align: right;}
+/* 
+footer nav ul {
+  padding-left: 0;
+}
+
+footer nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer nav ul li a:hover {
+  color: #007bff;
+} */
+
+/* Для екранів шириною від 320px до 600px */
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
   .contact-info .left-content,
   .contact-info .right-content {
     flex-basis: 100%;
   }
+
   .brand-logos img {
     max-width: 100px;
     height: auto;
@@ -296,46 +286,114 @@ footer {
   }
 }
 
-/* Для екранів шириною від 280px до 600px */
-@media screen and (min-width: 280px) and (max-width: 600px) {
+/* Для екранів шириною більше 600px */
+@media screen and (min-width: 601px) and (max-width:1199px) {
+  .container {
+    max-width: 600px
+  }
+
   p,
-  nav ul li a,
-  .brand-logos img {
-    font-size: 14px; /* Зменшуємо розмір тексту до 14px для малих екранів */
+  nav ul li a {
+    font-size: 18px;
+    /* Повертаємо стандартний розмір тексту для більших екранів */
   }
 }
 
-/* Для екранів шириною більше 600px */
-@media screen and (min-width: 600px) {
+/* Для екранів шириною від 320px до 600px */
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .container {
+    max-width: 480px;
+    width: 100%
+  }
+
   p,
-  nav ul li a,
-  .brand-logos img {
-    font-size: 18px; /* Повертаємо стандартний розмір тексту для більших екранів */
+  nav ul li a main-section  {
+    font-size: 10px;
+    /* Зменшуємо розмір тексту до 14px для малих екранів */
   }
 }
 
 /* Сховати оверлей меню за замовчуванням */
-.overlay-menu {
+/* .overlay-menu {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Півпрозорий фон */
-  z-index: 1000; /*відображати поверх інших елементів */
-}
+  background-color: rgba(0, 0, 0, 0.5); */
+  /* Півпрозорий фон */
+  /* z-index: 1000; */
+  /*відображати поверх інших елементів */
+/* } */
 
 /* Підказка для користувача, як натискати на бургер кнопку */
-.burger-menu {
+/* .burger-menu {
   cursor: pointer;
-}
+} */
 
 /* Стилі для бургер кнопки */
-.burger-icon {
+/* .burger-icon {
   width: 100px;
   height: 2px;
   background-color: #000;
   margin: 6px 0;
+} */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
 }
 
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.menu-button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #000;
+}
+
+.close-button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 601px) {
+  nav ul {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
