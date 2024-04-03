@@ -1,3 +1,38 @@
+/* Скидання стилів */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Общие стили */
 body {
   font-family: Arial, sans-serif;
@@ -8,8 +43,9 @@ body {
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 /* Стили для секции перед навигационным меню */
@@ -20,7 +56,7 @@ body {
   align-items: center;
   /*элементы по вертикали */
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .left-content {
@@ -30,8 +66,9 @@ body {
 }
 
 .contact-icons {
-  margin-right: 10px;
-  /* отступ между иконками мессенджеров */
+  display: flex;
+  gap: 10px; /* отступ между иконками мессенджеров */
+  margin-right: 24px;
 }
 
 .right-content {
@@ -41,60 +78,65 @@ body {
   /*элементы по вертикали */
 }
 
-.registration .btn {
-  margin-right: 10px;
-  /* Увеличиваем отступ между кнопками */
+.registration {
+  display: flex;
+  gap: 24px;
 }
 
 /* Стили для навигационного меню */
-nav {
-  padding: 2px 0;
+.header-nav {
+  padding: 14px 0px;
   /* Задание отступов вверху и внизу */
   background-color: #283761;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+.header-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 24px;
-}
-
-nav ul li a {
+.header-nav a {
   text-decoration: none;
   color: #ffffff;
 }
 
-nav ul li a:hover {
+.header-nav a:hover {
   color: #007bff;
+}
+
+/* --------Приховуємо мобільне меню та кнопку бургер--------- */
+.menu-button,
+.mobile-menu {
+  display: none;
 }
 
 /* Стили для главной секции */
 .main-section {
   padding: 50px 0px;
   /* Увеличил отступы для лучшего визуального эффекта */
-  background-image: url('images/atlantika.png');
+  background-image: url("images/atlantika.png");
   /* background-size: 1440px 682px; */
   /* Задаем конкретные размеры для фоновой картинки */
   background-position: center;
   /* Центрируем фоновую картинку */
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .main-section h1 {
+  padding: 259px 0px 50px; /* Добавлено padding-top 309px */
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #ffffff;
   /* Настраиваемый цвет текста */
 }
 
 .main-section p {
   font-size: 18px;
+  line-height: calc(24 / 18);
   margin-bottom: 20px;
   color: #ffffff;
   /* Настраиваемый цвет текста */
@@ -103,13 +145,12 @@ nav ul li a:hover {
 /* Стили для кнопок */
 button {
   padding: 10px 20px;
-  background-color: #01A0C6;
+  background-color: #01a0c6;
   color: #fff;
   border: none;
   cursor: pointer;
-  border: 1px solid #01A0C6;
+  border: 1px solid #01a0c6;
   border-radius: 8px;
-
 }
 
 button:hover,
@@ -118,7 +159,7 @@ button:focus {
 }
 
 /* Стили для секции с логотипами брендов */
-.brand-logos>.container {
+.brand-logos > .container {
   display: flex;
   /* Изменяем на flex */
   flex-wrap: wrap;
@@ -175,7 +216,6 @@ button:focus {
   margin-bottom: 20px;
 }
 
-
 /* Секция с формой для вопросов */
 .question-section {
   background-color: #f5f5f5;
@@ -228,12 +268,35 @@ button:focus {
 
 /* Стили для футера */
 footer {
-  background-color: #333;
+  background-color: #000000;
   color: #ffffff;
   padding: 20px 0;
   /* Центрируем содержимое футера по горизонтали */
-
 }
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-left img {
+  display: none;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-left a {
+  color: #fff;
+}
+.footer-left a:hover {
+  color: #007bff;
+}
+
 .footer-right img {
   display: inline-block;
   vertical-align: middle; /* Вирівнюємо зображення по вертикалі */
@@ -245,13 +308,27 @@ footer {
   justify-content: space-between;
 }
 
+.footer-right p {
+  margin-bottom:  11px; /* добавляем отступ после каждого параграфа */
+}
+
+.footer-right div {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right img {
+  margin-left: 12px; /* добавляем отступ между текстом и изображением */
+}
+
 /* Стили для футера */
 
-footer div
- {
+footer div {
   margin-bottom: 20px;
 }
-.footer-right {text-align: right;}
+.footer-right {
+  text-align: right;
+}
 /* 
 footer nav ul {
   padding-left: 0;
@@ -271,25 +348,10 @@ footer nav ul li a:hover {
   color: #007bff;
 } */
 
-/* Для екранів шириною від 320px до 600px */
-@media screen and (min-width: 320px) and (max-width: 600px) {
-
-  .contact-info .left-content,
-  .contact-info .right-content {
-    flex-basis: 100%;
-  }
-
-  .brand-logos img {
-    max-width: 100px;
-    height: auto;
-    margin: 10px;
-  }
-}
-
-/* Для екранів шириною більше 600px */
-@media screen and (min-width: 601px) and (max-width:1199px) {
+/* Для екранів шириною менше 1200px */
+@media screen and (max-width: 1200px) {
   .container {
-    max-width: 600px
+    max-width: 768px;
   }
 
   p,
@@ -297,19 +359,102 @@ footer nav ul li a:hover {
     font-size: 18px;
     /* Повертаємо стандартний розмір тексту для більших екранів */
   }
-}
 
-/* Для екранів шириною від 320px до 600px */
-@media screen and (min-width: 320px) and (max-width: 600px) {
-  .container {
-    max-width: 480px;
-    width: 100%
+  .header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  p,
-  nav ul li a main-section  {
-    font-size: 10px;
+  /* Приховуємо соціальні мережі та телефон */
+  .contact-info .left-content,
+  .contact-info .right-content {
+    display: none;
+  }
+  /* Приховуємо реєстрацію та вхід */
+  .header-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+  }
+
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+
+  .menu-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+  }
+
+  .menu-icon {
+    stroke: black;
+  }
+
+  .close-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .footer-left img {
+    display: block;
+  }
+
+  .footer-center {
+    display: none;
+  }
+}
+
+/* Для екранів шириною  до 600px */
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  p {
+    font-size: 16px;
     /* Зменшуємо розмір тексту до 14px для малих екранів */
+  }
+
+  .brand-logos img {
+    max-width: 100px;
+    height: auto;
+    /* margin: 10px; */
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-right {
+    text-align: left;
   }
 }
 
@@ -322,9 +467,9 @@ footer nav ul li a:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); */
-  /* Півпрозорий фон */
-  /* z-index: 1000; */
-  /*відображати поверх інших елементів */
+/* Півпрозорий фон */
+/* z-index: 1000; */
+/*відображати поверх інших елементів */
 /* } */
 
 /* Підказка для користувача, як натискати на бургер кнопку */
@@ -339,61 +484,3 @@ footer nav ul li a:hover {
   background-color: #000;
   margin: 6px 0;
 } */
-
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
-  z-index: 100;
-  transform: translateX(100%);
-  transition: transform 1s ease-in-out;
-}
-
-.mobile-menu.active {
-  transform: translateX(0);
-}
-
-.menu-button {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-icon {
-  width: 20px;
-  height: 20px;
-  stroke: #000;
-}
-
-.close-button {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-@media only screen and (min-width: 601px) {
-  nav ul {
-    display: block;
-  }
-
-  .mobile-menu {
-    display: none;
-  }
-
-  .menu-button {
-    display: none;
-  }
-}

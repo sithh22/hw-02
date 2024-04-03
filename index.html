@@ -5,18 +5,17 @@
   <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="script.js"></script>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container">
       <!-- секция перед навигационным меню -->
-      <div class="contact-info ">
+      <div class="contact-info">
         <div class="left-content">
           <div class="contact-icons">
-            <a href="link_to_viber"><img src="images/viber.png" alt="Viber" /></a>
-            <a href="link_to_whatsapp"><img src="images/whatsapp.png" alt="WhatsApp" /></a>
-            <a href="link_to_telegram"><img src="images/telegram.png" alt="Telegram" /></a>
+            <a href="link_to_viber"><img src="images/viber.png" alt="Viber icon" /></a>
+            <a href="link_to_whatsapp"><img src="images/whatsapp.png" alt="WhatsApp icon" /></a>
+            <a href="link_to_telegram"><img src="images/telegram.png" alt="Telegram icon" /></a>
           </div>
           <p>Телефон: +380 93 920 58 70</p>
         </div>
@@ -28,50 +27,56 @@
           </div>
         </div>
       </div>
+      <!-- Кнопка-бургер мобільного меню -->
+      <button class="menu-button">
+        <svg class="menu-icon" width="22" height="17">
+          <use href="./images/icon.svg#icon-hamburger"></use>
+        </svg>
+      </button>
+      <!-- Мобільного меню -->
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="./index.html#main">Home</a></li>
+          <li>
+            <a href="./mobile-menu.html#discount">Система знижок</a>
+          </li>
+          <li><a href="./mobile-menu.html#dropshipping">Дропшипінг</a></li>
+          <li>
+            <a href="./mobile-menu.html#delivery">оставка і оплата</a>
+          </li>
+          <li><a href="./mobile-menu.html#promotions">Акції</a></li>
+          <li><a href="./mobile-menu.html#contacts">Контакти</a></li>
+          <li><a href="./mobile-menu.html#about">Про нас</a></li>
+        </ul>
+        <button class="close-button">
+          <svg class="menu-icon" width="16" height="16">
+            <use href="./images/icon.svg#icon-close-icon"></use>
+          </svg>
+        </button>
+      </div>
     </div>
-    <nav>
+    <nav class="header-nav">
       <!-- Навигационное меню -->
       <div class="container">
         <ul>
-          <li><a href="#">Каталог товарів</a></li>
-          <li><a href="#">Система знижок</a></li>
-          <li><a href="#">Дропшипінг</a></li>
-          <li><a href="#">Доставка і оплата</a></li>
-          <li><a href="#">Акції</a></li>
-          <li><a href="#">Контакти</a></li>
-          <li><a href="#">Про нас</a></li>
+          <li><a href="#brand-logos">Каталог товарів</a></li>
+          <li><a href="#brand-logos">Система знижок</a></li>
+          <li><a href="#custom-section">Дропшипінг</a></li>
+          <li><a href="#custom-section">Доставка і оплата</a></li>
+          <li><a href="#footer-wrap container">Акції</a></li>
+          <li><a href="#footer-wrap container">Контакти</a></li>
+          <li><a href="#question-section">Про нас</a></li>
         </ul>
       </div>
+      
     </nav>
-    <button class="menu-button">
-      <svg class="menu-icon" width="16" height="16">
-        <use href="./images/burger.svg#icon-hamburger"></use>
-      </svg>
-    </button>
-
-    <div class="mobile-menu">
-      <ul>
-        <li><a href="./mobile-menu.html#Каталог товарів">Home</a></li>
-        <li><a href="./mobile-menu.html#Система знижок">Система знижок</a></li>
-        <li><a href="./mobile-menu.html#Дропшипінг">Дропшипінг</a></li>
-        <li><a href="./mobile-menu.html#оставка і оплата">оставка і оплата</a></li>
-        <li><a href="./mobile-menu.html#Акції">Акції</a></li>
-        <li><a href="./mobile-menu.html#Контакти">Контакти</a></li>
-        <li><a href="./mobile-menu.html#Про нас">Про нас</a></li>
-      </ul>
-      <button class="close-button">
-        <svg class="menu-icon" width="16" height="16">
-          <use href="./images/burger.svg#icon-close-icon"></use>
-        </svg>
-      </button>
-    </div>
   </header>
   <main>
     <!-- Секция с логотипом и описанием -->
-    <section class="main-section">
+    <section class="main-section" id="main">
       <div class="container">
         <!-- <img src="images/atlantika.png" alt="ATLANTIKA" width="1440" height="682"> -->
-        <img src="images/logo.png" alt="Contact Image" width="260" />
+        <img src="images/logo v2.svg" alt="Contact Image" width="455.75" height="37.45" />
         <h1>
           Це платформа для оптових замовлень спортивного харчування та
           аксесуарів.
@@ -90,9 +95,8 @@
       </div>
     </section>
 
-
     <!-- Секция с логотипами брендов -->
-    <section class="brand-logos">
+    <section class="brand-logos"  id="brand-logos">
       <div class="container">
         <img src="images/Quest2.png" alt="Описание изображения" width="130" height="98" />
         <img src="images/Biotechusa.webp" alt="Описание изображения" width="130" height="98" />
@@ -115,7 +119,7 @@
         <!-- <p>Текст описания</p> -->
       </div>
     </section>
-    <section class="custom-section">
+    <section class="custom-section" id="custom-section">
       <div class="container">
         <!-- <img src="images/photo 2.png" alt="Описание изображения" width="1442"> -->
         <div class="content">
@@ -129,7 +133,7 @@
       </div>
     </section>
     <!-- Секция с формой для вопросов -->
-    <section class="question-section">
+    <section class="question-section" id="question-section">
       <div class="container">
         <h2>Виникли питання?</h2>
         <p>Якщо у вас виникли питання, ми обов'язково на все відповімо.</p>
@@ -154,34 +158,52 @@
     </section>
   </main>
   <footer>
-    <div class="footer-wrap container">
+    <div class="footer-wrap container" id="footer-wrap container">
       <div class="footer-left">
-        <!-- Контент для левой части футера -->
-        <p>Каталог товарів</p>
-        <p>Система знижок</p>
-        <p>Дропшипінг</p>
-        <p>Доставка і оплата</p>
-        <p>Акції</p>
-        <p>Контакти</p>
-        <p>Про нас</p>
+        <img src="images/logo.png" alt="Логотип" width="200" />
+        <ul class="footer-nav">
+          <!-- Контент для левой части футера -->
+          <li><a href="#">Каталог товарів</a></li>
+          <li><a href="#">Система знижок</a></li>
+          <li><a href="#">Дропшипінг</a></li>
+          <li><a href="#">Доставка і оплата</a></li>
+          <li><a href="#">Акції</a></li>
+          <li><a href="#">Контакти</a></li>
+          <li><a href="#">Про нас</a></li>
+        </ul>
       </div>
-
-
       <!-- Лого центрально -->
       <div class="footer-center">
-        <img src="images/logo.png" alt="Логотип" width="200" />
+        <img src="images/logo futer.svg" alt="Логотип" width="303" height="23" />
       </div>
 
       <!-- Контент для правой части футера -->
       <div class="footer-right">
-        <p>Телефони:</p>
-        <img src="images/Vector 1.png" alt="телефон"/><p>Ігор: +380 93 920 58 70</p>
-        <img src="images/Vector 2.png" alt="телефон 2"/><p>Роман: +380 93 672 74 78</p>
-        <img src="images/Vector 3.png" alt="час"/><p>Години роботи: Пн.-пт.: з 10:00 до 19:00</p>
-        <img src="images/Vector 4.png" alt="адреса"/><p>Адреса: Київ, вул. Андрющенко 2/26</p>
+        <div>
+          <p>Телефони:</p>
+        </div>
+        <div>
+          <p>Ігор: +380 93 920 58 70</p>
+          <img src="images/Vector 1.png" alt="телефон" width="15" height="15" />
+        </div>
+        <div>
+          <p>Роман: +380 93 672 74 78</p>
+          <img src="images/Vector 2.png" alt="телефон 2" width="15" height="15" />
+        </div>
+        <div>
+          <p>Години роботи: Пн.-пт.: з 10:00 до 19:00</p>
+          <img src="images/Vector 3.png" alt="час" width="15" height="15" />
+        </div>
+        <div>
+          <p>Адреса: Київ, вул. Андрющенко 2/26</p>
+          <img src="images/Vector 4.png" alt="адреса" width="15" height="15" />
+        </div>
+            <a href="link_to_facebook"><img src="images/facebook.svg" alt="facebook icon" /></a>
+            <a href="link_to_youtube"><img src="images/youtube.svg" alt="youtube icon" /></a>
+            <a href="link_to_insta"><img src="images/insta.svg" alt="insta icon" /></a>
       </div>
-    </div>
   </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
