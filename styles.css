@@ -123,7 +123,6 @@ body {
   /* Центрируем фоновую картинку */
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 .main-section h1 {
@@ -274,6 +273,11 @@ footer {
   /* Центрируем содержимое футера по горизонтали */
 }
 
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-left {
   display: flex;
   flex-direction: column;
@@ -297,38 +301,37 @@ footer {
   color: #007bff;
 }
 
+.footer-right {
+  text-align: right;
+}
+
 .footer-right img {
   display: inline-block;
   vertical-align: middle; /* Вирівнюємо зображення по вертикалі */
   margin-right: 1px; /* Задаємо відступ між зображенням і текстом */
 }
 
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-right p {
-  margin-bottom:  11px; /* добавляем отступ после каждого параграфа */
-}
-
 .footer-right div {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
-.footer-right img {
-  margin-left: 12px; /* добавляем отступ между текстом и изображением */
+.footer-right div:nth-child(-n + 3) {
+  margin-bottom: 12px;
 }
 
-/* Стили для футера */
+.footer-address {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
 
-footer div {
-  margin-bottom: 20px;
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.footer-right {
-  text-align: right;
-}
+
 /* 
 footer nav ul {
   padding-left: 0;
@@ -365,7 +368,7 @@ footer nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
   }
-
+  
   /* Приховуємо соціальні мережі та телефон */
   .contact-info .left-content,
   .contact-info .right-content {
@@ -436,7 +439,6 @@ footer nav ul li a:hover {
     max-width: 480px;
     width: 100%;
   }
-
   p {
     font-size: 16px;
     /* Зменшуємо розмір тексту до 14px для малих екранів */
