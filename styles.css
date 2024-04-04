@@ -100,6 +100,7 @@ body {
 .header-nav a {
   text-decoration: none;
   color: #ffffff;
+  transition: color 300ms ease-in-out;
 }
 
 .header-nav a:hover {
@@ -158,6 +159,7 @@ button {
   cursor: pointer;
   border: 1px solid #01a0c6;
   border-radius: 8px;
+  transition: background-color 300ms ease-in-out;
 }
 
 button:hover,
@@ -307,6 +309,7 @@ footer {
 }
 .footer-left a:hover {
   color: #007bff;
+  transition:color 300ms ease-in-out;
 }
 
 .footer-right {
