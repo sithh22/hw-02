@@ -124,7 +124,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* Ретинізація фонового зображення */
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .box {
+    background-image: url("atlantika@2x.png");
+  }
+}
 .main-section h1 {
   padding: 259px 0px 50px; /* Добавлено padding-top 309px */
   font-size: 30px;
@@ -451,6 +459,11 @@ footer nav ul li a:hover {
 
   .main-section h1 {
     font-size: 16px;
+  }
+
+  .header-images {
+    width: 139px;
+    height: 26px;
   }
 
   p {
