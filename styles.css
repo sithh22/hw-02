@@ -331,6 +331,10 @@ footer {
   align-items: center;
   gap: 15px;
 }
+.mobile-menuItem {
+  color: red;
+  font-size: 16px;
+}
 
 /* 
 footer nav ul {
@@ -368,7 +372,7 @@ footer nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
   }
-  
+
   /* Приховуємо соціальні мережі та телефон */
   .contact-info .left-content,
   .contact-info .right-content {
@@ -381,7 +385,8 @@ footer nav ul li a:hover {
 
   .mobile-menu {
     position: fixed;
-    display: block;
+    display: flex;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -439,6 +444,15 @@ footer nav ul li a:hover {
     max-width: 480px;
     width: 100%;
   }
+  .main-images {
+    width: 240px;
+    height: 20px;
+  }
+
+  .main-section h1 {
+    font-size: 16px;
+  }
+
   p {
     font-size: 16px;
     /* Зменшуємо розмір тексту до 14px для малих екранів */
